@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<!-- <html lang="en" style="width: -webkit-fill-available; max-width: 3000px;"> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jouwvelgen</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- for responsiveness of Boxes -->
+    <!-- for boxes -->
+    <style>
+      .section-heading__title {
+        position: relative;
+        text-transform: uppercase;
+        color: #515151;
+        font-size: 24px;
+        line-height: 20px;
+      }
+
+      .section-heading__title:after {
+        position: absolute;
+        bottom: -18px;
+        display: block;
+        width: 155px;
+        height: 2px;
+        content: " ";
+        background-color: #b92500;
+      }
+
+      .usp {
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        margin: 10px 0;
+        background-color: #f8f9fa;
+      }
+
+      .icon {
+        /* font-size: 30px; */
+        /* margin-bottom: 10px; */
+        /* max-width: 50px; */
+        /* height: 40px; */
+        font-size: 50px;
+      }
+
+      @media (max-width: 576px) {
+        /* Mobile view */
+        .usp {
+          flex: 1 1 50%;
+        }
+      }
+
+      @media (min-width: 577px) and (max-width: 768px) {
+        /* Tablet view */
+        .usp {
+          flex: 1 1 33.33%;
+        }
+      }
+
+      @media (min-width: 769px) {
+        /* Desktop view */
+        .usp {
+          flex: 1 1 25%;
+        }
+      }
+      /* error fixed here */
+
+      @media (min-width: 768px) and (max-width: 768px) {
+      
+        .usp {
+          /* margin-top: 13px; */
+        }
+        .section-heading__title {
+          /* margin-top: 100px; */
+        }
+      }
+      @media (min-width: 1024px) and (max-width: 1024px) {
+        .section-heading__title {
+          margin-top: 20px;
+        }
+      }
+
+      @media (min-width: 1441px) and (max-width: 1441px) {
+        .section-heading__title {
+          margin-top: 100px;
+        }
+        .scroller {
+          height: 150px;
+        }
+      }
+      @media (min-width: 1442px) and (max-width: 1442px) {
+        .section-heading__title {
+          margin-top: 150px;
+        }
+      }
+      @media (min-width: 1441px) and (max-width: 1800px) {
+        .section-heading__title {
+          margin-top: 40px;
+        }
+      }
+    </style>
+
+    <!-- for slider  in rims and tyres brands logos-->
+    <style>
+      /* tyre and rim slider */
+
+      .tslider {
+        margin: 1;
+        padding: 1;
+        box-sizing: border-box;
+      }
+
+      /* Global styles */
+      .tslider {
+        font-family: Arial, sans-serif;
+      }
+
+      .navbartslider {
+        /* background-color: #333; */
+        background-color: #fdfdfd;
+        margin: 10px;
+      }
+
+      .logo-containertslider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logotslider {
+        /* width: 80px; */
+        /* height: auto; */
+        height: auto;
+        width: auto;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 20px;
+      }
+
+      .containertslider {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .carouseltslider {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+      }
+
+      .carousel-innertslider {
+        display: flex;
+        animation: slide 7s infinite;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+
+        20% {
+          transform: translateX(-100%);
+        }
+
+        40% {
+          transform: translateX(-200%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .carousel-itemtslider {
+        flex: 0 0 33.33%;
+        text-align: center;
+      }
+
+      .carousel-itemtslider img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Media query for responsiveness */
+      @media (max-width: 768px) {
+        .carousel-itemtslider {
+          flex: 0 0 50%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .carousel-itemtslider {
+          flex: 0 0 100%;
+        }
+      }
+
+      /* Manual slide buttons */
+      .carousel-controlstslider {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+      }
+
+      .carousel-controltslider {
+        background: transparent;
+        color: #ffffff;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .carousel-control.left {
+        left: 0;
+      }
+
+      .carousel-control.right {
+        right: 0;
+      }
+    </style>
+    <!-- css for recent orders (used) -->
+    <style>
+      .img-container {
+        overflow: hidden;
+        /* Ensures the translation effect does not overflow */
+      }
+
+      .img-container img {
+        width: 100%;
+        /* Ensures the image takes the full width of the column */
+        height: 200px;
+        /* Set a fixed height for the images */
+        object-fit: cover;
+        /* Ensures the image covers the container without distortion */
+        transition: transform 0.5s ease;
+        /* Adds a smooth transition effect */
+      }
+
+      .img-container img:hover {
+        transform: scale(1.1);
+        /* Translates the image upwards on hover */
+      }
+    </style>
+    <!-- for responsiveness of testimonials -->
+    <!-- for testemonial -->
+    <style>
+      .testimonials-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .testimonial {
+        flex: 1 1 calc(25% - 32px);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+      }
+
+      .rating {
+        margin-top: 10px;
+      }
+
+      .rating .fas,
+      .rating .far {
+        color: #ffd700;
+        font-size: 16px;
+      }
+
+      .gif {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .gif .fas.fa-heartbeat {
+        color: red;
+        font-size: 24px;
+        animation: heartbeat 1.5s infinite;
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+        20% {
+          transform: scale(1.2);
+        }
+        40% {
+          transform: scale(1);
+        }
+        60% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .testimonial {
+          flex: 1 1 calc(50% - 32px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .testimonial {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+
+    <!-- for footer pencil (set)-->
+    <style>
+      .footer {
+        width: 100%;
+        background: linear-gradient(to right, #00093c, #2d0b00);
+        color: #fff;
+        padding: 50px 0 30px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      .footer .row {
+        width: 85%;
+        /* margin: auto;     */
+        margin: auto;
+        /* width: 100%; */
+        /* margin: 20px; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .footer .col {
+        flex-basis: 25%;
+        padding: 10px;
+      }
+
+      /* issue resoleved here */
+      /* .footer .col:nth-child(2), .col:nth-child(3){
+        flex-basis: 15%;
+    } */
+      /* issue resolved end here */
+      .footer .footer_logo {
+        width: 150px;
+        position: relative;
+        /* position: absolute; */
+        /* top: -23px; */
+
+        /* left: -20px; */
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+      .footer .footer_about {
+        position: relative;
+        top: -23px;
+      }
+      .footer .col h3 {
+        width: fit-content;
+        margin-bottom: 40px;
+        position: relative;
+      }
+      .footer .footer_email {
+        width: fit-content;
+        border-bottom: 1px solid #f66335;
+        margin: 20px 0;
+      }
+      .footer .col ul li {
+        list-style: none;
+        margin-bottom: 12px;
+      }
+      .footer .col ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .footer .col form {
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #f66335;
+        margin-bottom: 50px;
+      }
+      .footer .col form .icon {
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      .footer .col form input {
+        width: 100%;
+        background: transparent;
+        color: #ccc;
+        border: 0;
+        outline: none;
+      }
+      .footer .col form button {
+        background: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+      }
+      .footer .col form button .icon_right {
+        font-size: 16px;
+        color: #ccc;
+      }
+      .footer .col .social_icons .social_icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background: #f66335;
+        margin-right: 15px;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .footer hr {
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+      }
+      .footer .copyright {
+        text-align: center;
+      }
+      .footer .bottom_line {
+        width: 100%;
+        height: 5px;
+        background: #767676;
+        border-radius: 3px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        overflow: hidden;
+      }
+      .footer .bottom_line span {
+        width: 15px;
+        height: 100%;
+        background: #f66335;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        animation: moveline 2s linear infinite;
+      }
+      @keyframes moveline {
+        0% {
+          left: -20px;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @media (min-width: 320px) and (max-width: 500px) {
+        .footer .row {
+          display: grid;
+        }
+      }
+
+      @media (min-width: 501px) and (max-width: 600px) {
+        .footer .row {
+          display: grid;
+        }
+      }
+    </style>
+
+    <!-- for hidden objects -->
+
+    <style>
+      /* Basic styling for animation */
+      .Vechicle-Search {
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        overflow: hidden;
+        max-height: 1000px; /* Adjust based on content height */
+      }
+
+      .Vechicle-Search.hidden {
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* Hide toggle button by default */
+      #toggleButton {
+        display: none;
+      }
+
+      /* Show toggle button only for screens between 769px and 1199px */
+      @media (min-width: 768px) and (max-width: 1199px) {
+        #toggleButton {
+          display: inline-block;
+        }
+      }
+    </style>
+
+    <!-- ading responsivness for marrequw -->
+   
+    <script src="code.js"></script>
+    <!-- navbar -->
+    <style>
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #00093c, #2d0b00);
+        padding: 10px 20px;
+        position: relative;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .logo h1 {
+        color: yellow;
+        margin: 0;
+      }
+
+      .cart {
+        display: flex;
+        align-items: center;
+      }
+
+      .cart img {
+        height: 30px;
+        margin-left: 20px;
+      }
+
+      .tags {
+        display: flex;
+        align-items: center;
+      }
+
+      .tags a {
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .toggle-button {
+        display: none;
+        font-size: 40px;
+      }
+
+      .offcanvas-menu {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(to right, #00093c, #2d0b00);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        padding: 10px;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .offcanvas-menu.active {
+        display: flex;
+        transform: translateX(0);
+      }
+
+      .offcanvas-menu .close-button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        align-self: flex-end;
+        padding: 10px;
+      }
+
+      .offcanvas-menu .offcanvas-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .offcanvas-menu .offcanvas-logo img {
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .offcanvas-menu .offcanvas-logo h1 {
+        color: yellow;
+        margin: 0;
+      }
+
+      .offcanvas-menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .toggle-button {
+          display: block;
+          order: 1;
+          background: transparent;
+          color: white;
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .logo {
+          order: 2;
+          justify-content: center;
+          flex: 1;
+          text-align: center;
+        }
+
+        .cart {
+          order: 3;
+          justify-content: flex-end;
+        }
+
+        .tags {
+          display: none;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .header {
+          flex-direction: row;
+        }
+
+        .toggle-button {
+          display: none;
+        }
+
+        .logo {
+          order: 1;
+          justify-content: flex-start;
+        }
+
+        .cart {
+          order: 2;
+          justify-content: center;
+        }
+
+        .tags {
+          display: flex;
+          order: 3;
+          justify-content: flex-end;
+        }
+
+        .offcanvas-menu {
+          display: none;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .logo img {
+          height: 40px;
+        }
+
+        .cart img:nth-child(n + 2) {
+          display: none;
+        }
+      }
+    </style>
+    <!-- navbar end -->
+
+    <!--  for configurer -->
+    <style>
+      .confirger-isreal .brand-logo {
+        height: 30px; /* Adjust the size of the logos */
+        margin-right: 10px; /* Space between the logo and text */
+      }
+
+      .confirger-isreal .brand-name {
+        font-size: 16px; /* Adjust the font size of the text */
+        color: #333; /* Adjust the color of the text */
+        align-self: left; /* Center the text vertically */
+      }
+
+      .scroll-box .centre {
+        display: flex;
+        align-items: left;
+        margin-bottom: 10px; /* Space between rows */
+      }
+
+      .scroll-box .brand-item {
+        display: flex;
+        align-items: left;
+      }
+
+      
+     
+    </style>
+
+
+
+
+    <!-- scrool bar -->
+     <style>
+        .scroller{
+            height: auto;
+        }
+        
+.scroller {
+    /* width: 300px; Adjust as needed */
+
+    width:100%;
+    max-height: 170px; /* Adjust as needed */
+    overflow: auto;
+    border: 1px solid #ccc;
+    /* margin: 20px; */
+  }
+  
+  .scroll-box {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+  
+  /* Style for individual items */
+  .scroll-box div {
+    padding: 6px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+  .scroll-box div:hover {
+    background-color: rgb(253, 153, 59); /* Change background color on hover */
+  }
+
+
+
+     </style>
+
+
+
+<!-- last header -->
+ 
+<style>
+    .header-fullwidth li {
+    margin-left: 0;
+}
+
+.header-fullwidth {
+    display: none;
+}
+
+#displayhere {
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .header-fullwidth {
+        display: none !important;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    background: #505050;
+}
+
+.header-main {
+    background: #A6A6A6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header-fullwidth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    list-style-type: none;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.header-top,
+.header-main {
+    background: #505050;
+}
+
+.header-top {
+    background: #505050;
+    color: white;
+}
+
+.header-fullwidth li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 11px;
+    margin-left: 67px;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.header-fullwidth li i,
+.header-fullwidth li img {
+    margin-right: 10px; /* Adjust margin between icon and text */
+    max-width: 20px; /* Limit maximum width of icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+</style>
+
+
+
+
+   <style>
+    .center_test{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+    @media   (min-width: 769px) and (max-width: 1024px) {
+      .center_test{
+        display: none !important;
+        align-items: center;
+      } 
+    }
+    @media   (min-width: 1025px) and (max-width: 1444px) {
+      .center_test{
+        display: none !important;
+        align-items: center;
+      } 
+
+    }
+
+   
+  
+  </style>
+
+  <!--  for responsivens -->
+    
+
+  <style>
+    @media(min-width:320px) and (max-width:767px)
+    {
+      .w-adjustment {
+        width: 100%;
+    }
+
+    #carouselExampleAutoplaying .carousel-inner{
+      min-height: 210px;
+      overflow: hidden;
+    }
+  }
+  </style>
+
+
+<!-- resonsiveness for bigger screens-->
+
+<style>
+  @media(min-width:1200px) and (max-width:1440px){
+    .confirger-isreal{
+      width:400px;
+      margin-top: -200px;
+      position:absolute;
+    }
+
+  }
+
+  @media(min-width:1441px) and (max-width:1600px){
+    .confirger-isreal{
+      width:400px;
+      margin-top: -250px;
+      /* height: 70%; */
+      position:absolute;
+      height: 500px;
+    }
+    
+    
+  }
+
+  @media(min-width:1601px) and (max-width:1800px){
+    .confirger-isreal{
+      width:400px;
+      margin-top: -250px;
+      /* height: 70%; */
+      position:absolute;
+      height: 500px;
+    }
+    
+    
+  }
+ </style>
+
+
+
+  </head>
+
+  <body style="overflow-x: hidden;">
+
+
+    <!-- moving navbar -->
+
+      
+    <div class="header-top" id="baseline-animation">
+        <div class="container col">
+  
+          
+          <ul class="header-fullwidth">
+            <li ><i class="fas fa-credit-card" style="margin-right:5px ;"></i>Secure payment</li>
+            <li><i class="fa-thin fa-truck" style="margin-right:5px ;"></i>Free Shipping</li>
+            <li>
+              <i class="fa-solid fa-circle-notch" style="margin-right:5px ;"></i> 14 Days return Policy
+            </li>
+            <li>
+              <i class="fa-thin fa-money-check" style="margin-right:5px ;"></i> Purchase in 3 installments with 0% interest
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-question" style="margin-right:5px ;"></i>Services & Help
+            </li>
+            <li><img src="/Images/Flag.png" alt="" / style="margin-right: 2px;">EU</li>
+  
+          </ul>
+          <div class="center_test" id="displayhere"  style="padding: 10px;"></div>
+        </div>
+      </div>
+    <div class="header">
+      <button class="toggle-button">&#9776;</button>
+
+      <div class="logo">
+        <img src="logosandimages/PNG GG.png" alt="Logo" />
+      </div>
+      <div class="cart">
+        <img src="somelogos/wc1.svg" alt="Cart" />
+        <img src="somelogos/heartw1.svg" alt="Cart" />
+        <img src="somelogos/personwhite1.svg" alt="Cart" />
+      </div>
+      <div class="tags" style="font-size: 22px;">
+        <a href="#">Home</a>
+        <a href="#">products</a>
+        <a href="#">services</a>
+        <a href="#">contact</a>
+      </div>
+    </div>
+    <div class="offcanvas-menu">
+      <button class="close-button">&times;</button>
+      <div class="offcanvas-logo">
+        <img src="logosandimages/PNG GG.png" alt="Logo" />
+        <!-- <h1>Site Name</h1> -->
+      </div>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      Social Media
+
+      <div class="social_icons" style="margin-left: 20px">
+        <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+        <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+        <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+        <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector(".toggle-button")
+        .addEventListener("click", function () {
+          document.querySelector(".offcanvas-menu").classList.add("active");
+        });
+
+      document
+        .querySelector(".close-button")
+        .addEventListener("click", function () {
+          document.querySelector(".offcanvas-menu").classList.remove("active");
+        });
+    </script>
+    <!-- header end -->
+
+    <!-- MAIN content -->
+    <div
+      class="Carsousel-confrigurer"
+      style="margin-bottom: 0px; background-color: #ffffff;"
+    >
+    <!-- main crausal -->
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="Images/SLIDER_1.jpg"
+              class="d-block w-100"
+              alt="..."
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%)"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/galley photo/gallery-photo-1.jpg"
+              class="d-block w-100"
+              alt="..."
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%)"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/galley photo/gallery-photo-3.jpg"
+              class="d-block w-100"
+              alt="..."
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+    <div class="row" style="margin: 10px;">
+        <div class=" colsm-12 col-lg-6 ">
+          <div class="d-flex justify-content-between align-items:center">
+       
+            <div class="fortyrecrausal">
+              
+              <div
+                id="carouselExampleControls1"
+                data-ride="carousel"
+                style="margin-right: -30px; "
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      class="d-block w-adjustment"
+                      src="Images/wheels-carousel/ats-passion-diamant-schwarz-frontpoliert_komplettrad.webp"
+                      alt="First slide"
+
+
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-adjustment"
+                      src="Images/wheels-carousel/damina-performance-dm08_black_komplettrad.webp"
+                      alt="Second slide"
+                      
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-adjustment"
+                      src="Images/wheels-carousel/keskin-kt20_palladium-painted_komplettrad.webp"
+                      alt="Third slide"
+                      
+                    />
+                  </div>
+                  <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/mam-b3n_black-front-polished_komplettrad.webp"
+                        alt="Second slide"
+                      
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/r3wheels-r3h01-anthracite-polished_komplettrad.webp"
+                        alt="Third slide"
+                    
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/r3wheels-r3h02-black-polished_komplettrad.webp"
+                        alt="Second slide"
+                        
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/r3wheels-r3h03-anthracite-matt_komplettrad.webp"
+                        alt="Third slide"
+                       
+                      />
+                    </div>
+
+                </div>
+                
+              </div>
+              
+            </div>
+            <!-- for rim carousal -->
+            <div class="forrimcrausal">
+              <!-- First Carousel for images -->
+              <div
+                id="carouselExampleControls"
+                data-ride="carousel"
+                style="margin-left: -25px; margin-top: 15px"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      class="d-block w-adjustment"
+                      src="Images/wheels-carousel/ats-passion-diamant-schwarz-frontpoliert_alufelge.webp"
+                      alt="First slide"
+
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-adjustment"
+                      src="Images/wheels-carousel/damina-performance-dm08_black_alufelge.webp"
+                      alt="Second slide"
+                      
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-adjustment"
+                      src="Images/wheels-carousel/keskin-kt20_palladium-painted_alufelge.webp"
+                      alt="Third slide"
+                   
+                    />
+                  </div>
+
+
+
+                  <!-- adding more rims -->
+                  <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/mam-b3n_black-front-polished_alufelge.webp"
+                        alt="Second slide"
+                        
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/r3wheels-r3h01-anthracite-polished_alufelge.webp"
+                        alt="Third slide"
+                  
+                      />
+                    </div>
+
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/r3wheels-r3h02-black-polished_alufelge.webp"
+                        alt="Second slide"
+                        
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-adjustment"
+                        src="Images/wheels-carousel/r3wheels-r3h03-anthracite-matt_alufelge.webp"
+                        alt="Third slide"
+                        
+                      />
+                    </div>
+
+
+
+
+                </div>
+               
+              </div>
+            </div>
+
+            <div class="" style="padding-left: 11px;" >
+              <div class="" style="font-weight: 700; font-size: larger ; ">
+                MOM
+              </div>
+              <div style="font-size: 15px">A1</div>
+              <div class="mt-3">
+                <!-- <p >in sizes 18-19 inches</p> -->
+              </div>
+              <div class="col">
+                <div>
+                  ever since
+                  <span style="text-decoration: line-through">E469.12</span>
+                </div>
+                <div class="price-marked" id="marked-price-1">407.60</div>
+                <div>
+                  <p class="m-0">for 4 rims</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column justify-content-between p-0" style="padding-left: 0px;">
+                <div>
+                  <div style="margin-bottom: 20px;">
+                    <img
+                      src="Images/Small rim brand images/MAM_35px.png"
+                      alt=""
+                      id="logo_2"
+                      style="max-width: 60px; height: auto; margin-bottom: 20px"
+                    />
+                  </div>
+                  <div>
+                      <img
+                        src="homepage/testimage.jpg"
+                        alt=""
+                        id="logo_"
+                        style="max-width: 60px; height: auto; margin-top: 20px"
+                      />
+                  </div>
+                </div>
+                <div class="" style="margin-top: 15px; margin-left: 5px;">
+                <!-- <button style="background-color: #f66335; width: 70%; height: 20px;" id="Rnext-button"> > </button> -->
+                <div class="centre" id="Rnext-button">&#11166;</div>
+
+
+                </div>
+
+            </div>
+          </div>
+         
+
+
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <div class="confirger-isreal" style="background-color: rgba(0, 0, 0, 0.29); margin-bottom: 0px;">
+            <div class="configer-header" style="background-color: rgba(0, 0, 0, 0.29)">
+              <h2 class="header-config" style="margin: 1px; padding: 15px">
+                FIND SUITABLE ALUMINUM FOR YOUR CAR
+              </h2>
+            </div>
+            <div style="padding-left: 15px">
+              Select your car via our vehicle search.
+            </div>
+            <div class="Vechicle-Search" id="vechicleSearch" style="margin: 15px; background-color: transparent">
+              <div style="margin-bottom: 10px;">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Select your Brand" aria-label="Search" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="scroller" id="brandScroller">
+                <div class="scroll-box">
+                  <div class="brand-item" data-brand="ABARTH">
+                    <img src="logosandimages/ABARTH-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ABARTH</span>
+                  </div>
+                  <div class="brand-item" data-brand="ACURA">
+                    <img src="logosandimages/ACURA-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ACURA</span>
+                  </div>
+                  <div class="brand-item" data-brand="ALFA ROMEO">
+                    <img src="logosandimages/ALFA-ROMEO-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ALFA ROMEO</span>
+                  </div>
+                  <div class="brand-item" data-brand="ALPINE">
+                    <img src="logosandimages/ALPINE-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ALPINE</span>
+                  </div>
+                  <div class="brand-item" data-brand="ASTON MARTIN">
+                    <img src="logosandimages/ASTON-MARTIN-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ASTON MARTIN</span>
+                  </div>
+    
+    
+    
+    
+    
+    
+    
+                  
+                  <!-- Add more brands here -->
+    
+                  <div class="brand-item" data-brand="AUDI">
+                    <img src="logosandimages/AUDI-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">AUDI</span>
+                  </div>
+                  <div class="brand-item" data-brand="BENTLY">
+                    <img src="logosandimages/BENTLEY-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BENTLY</span>
+                  </div>
+                  <div class="brand-item" data-brand="BMW">
+                    <img src="logosandimages/BMW-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BMW</span>
+                  </div>
+                  <div class="brand-item" data-brand="ABARTH">
+                    <img src="logosandimages/ABARTH-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ABARTH</span>
+                  </div>
+                  <div class="brand-item" data-brand="ACURA">
+                    <img src="logosandimages/ACURA-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ACURA</span>
+                  </div>
+                  <div class="brand-item" data-brand="ALFA ROMEO">
+                    <img src="logosandimages/ALFA-ROMEO-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ALFA ROMEO</span>
+                  </div>
+                  <div class="brand-item" data-brand="ALPINE">
+                    <img src="logosandimages/ALPINE-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ALPINE</span>
+                  </div>
+                  <div class="brand-item" data-brand="ASTON MARTIN">
+                    <img src="logosandimages/ASTON-MARTIN-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ASTON MARTIN</span>
+                  </div>
+    
+    
+    
+    
+    
+    
+    
+                  
+                  <!-- Add more brands here -->
+    
+                  <div class="brand-item" data-brand="AUDI">
+                    <img src="logosandimages/AUDI-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">AUDI</span>
+                  </div>
+                  <div class="brand-item" data-brand="BENTLY">
+                    <img src="logosandimages/BENTLEY-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BENTLY</span>
+                  </div>
+                  <div class="brand-item" data-brand="BMW">
+                    <img src="logosandimages/BMW-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BMW</span>
+                  </div>
+                  <div class="brand-item" data-brand="ABARTH">
+                    <img src="logosandimages/ABARTH-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ABARTH</span>
+                  </div>
+                  <div class="brand-item" data-brand="ACURA">
+                    <img src="logosandimages/ACURA-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ACURA</span>
+                  </div>
+                  <div class="brand-item" data-brand="ALFA ROMEO">
+                    <img src="logosandimages/ALFA-ROMEO-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ALFA ROMEO</span>
+                  </div>
+                  <div class="brand-item" data-brand="ALPINE">
+                    <img src="logosandimages/ALPINE-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ALPINE</span>
+                  </div>
+                  <div class="brand-item" data-brand="ASTON MARTIN">
+                    <img src="logosandimages/ASTON-MARTIN-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">ASTON MARTIN</span>
+                  </div>
+    
+    
+    
+    
+    
+    
+    
+                  
+                  <!-- Add more brands here -->
+    
+                  <div class="brand-item" data-brand="AUDI">
+                    <img src="logosandimages/AUDI-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">AUDI</span>
+                  </div>
+                  <div class="brand-item" data-brand="BENTLY">
+                    <img src="logosandimages/BENTLEY-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BENTLY</span>
+                  </div>
+                  <div class="brand-item" data-brand="BMW">
+                    <img src="logosandimages/BMW-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BMW</span>
+                  </div>
+                  <div class="brand-item" data-brand="CADILLAC">
+                    <img src="logosandimages/CADILLAC-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">CADILLAC</span>
+                  </div>
+                  <div class="brand-item" data-brand="CHEVROLET">
+                    <img src="logosandimages/CHEVROLET-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">CHEVROLET</span>
+                  </div>
+    
+                  <div class="brand-item" data-brand="AUDI">
+                    <img src="logosandimages/AUDI-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">AUDI</span>
+                  </div>
+                  <div class="brand-item" data-brand="BENTLY">
+                    <img src="logosandimages/BENTLEY-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BENTLY</span>
+                  </div>
+                  <div class="brand-item" data-brand="BMW">
+                    <img src="logosandimages/BMW-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BMW</span>
+                  </div>
+                  <div class="brand-item" data-brand="CADILLAC">
+                    <img src="logosandimages/CADILLAC-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">CADILLAC</span>
+                  </div>
+                  <div class="brand-item" data-brand="CHEVROLET">
+                    <img src="logosandimages/CHEVROLET-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">CHEVROLET</span>
+                  </div>
+                  <div class="brand-item" data-brand="AUDI">
+                    <img src="logosandimages/AUDI-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">AUDI</span>
+                  </div>
+                  <div class="brand-item" data-brand="BENTLY">
+                    <img src="logosandimages/BENTLEY-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BENTLY</span>
+                  </div>
+                  <div class="brand-item" data-brand="BMW">
+                    <img src="logosandimages/BMW-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">BMW</span>
+                  </div>
+                  <div class="brand-item" data-brand="CADILLAC">
+                    <img src="logosandimages/CADILLAC-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">CADILLAC</span>
+                  </div>
+                  <div class="brand-item" data-brand="CHEVROLET">
+                    <img src="logosandimages/CHEVROLET-LOGO.PNG" alt="" class="brand-logo" />
+                    <span class="brand-name">CHEVROLET</span>
+                  </div>
+    
+                  
+                </div>
+              </div>
+              <div class="s1">
+    
+              
+              <div class="scroller" id="modelScroller" style="display: none;">
+                <div class="scroll-box">
+                  <!-- Model items will be dynamically inserted here -->
+                </div>
+              </div>
+              <div class="scroller" id="rimScroller" style="display: none;">
+                <div class="scroll-box">
+                  <!-- Rim items will be dynamically inserted here -->
+                </div>
+              </div>
+            </div>
+              <div>
+                <button type="button" class="btn btn-primary config-btn" style="width: 100%; margin-top: 10px;" id="searchRimsBtn">
+                 Show Appropriate Rims
+                </button>
+                <button type="button" class="btn btn-secondary config-btn" style="width: 100%; margin-top: 3px;" id="searchRimsBtn">
+                  Search Rims
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+      
+
+
+
+      
+
+
+  </div>
+<!-- </div> -->
+
+
+
+
+    
+
+    
+
+
+
+<!-- script for it  -->
+<script>
+  document.querySelectorAll('.brand-item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      const brand = this.getAttribute('data-brand');
+      loadModels(brand);
+      highlightSelectedItem(item, 'brand-item', 'brandScroller');
+      document.getElementById('modelScroller').style.display = 'block';
+    });
+  });
+  
+  function loadModels(brand) {
+    const modelScroller = document.getElementById('modelScroller');
+    modelScroller.querySelector('.scroll-box').innerHTML = '';
+    const models = getModelsByBrand(brand);
+    
+    models.forEach(function (model) {
+      const modelItem = document.createElement('div');
+      modelItem.classList.add('csM');
+      modelItem.setAttribute('id', model.id);
+      modelItem.innerHTML = `
+        <span>
+          <b>${model.name} </b> (${model.code})
+          <div class="csM-date"><small>${model.date}</small></div>
+        </span>
+      `;
+      
+      modelItem.addEventListener('click', function () {
+        loadRims(model);
+        highlightSelectedItem(modelItem, 'csM', 'modelScroller');
+        document.getElementById('rimScroller').style.display = 'block';
+      });
+      
+      modelScroller.querySelector('.scroll-box').appendChild(modelItem);
+    });
+  }
+  
+  function loadRims(model) {
+    const rimScroller = document.getElementById('rimScroller');
+    rimScroller.querySelector('.scroll-box').innerHTML = '';
+    const rims = getRimsByModel(model.name); // Use model.name for fetching rims
+    const modelDetailsHTML = `
+      <div>
+        <strong>Model:</strong> ${model.name} <br>
+        <strong>Code:</strong> ${model.code} <br>
+        <strong>Date:</strong> ${model.date}
+      </div>
+    `;
+    
+    rims.forEach(function (rim) {
+      const rimItem = document.createElement('div');
+      rimItem.classList.add('csM');
+      rimItem.innerHTML = `<span class="brand-name">${rim.name}</span>`;
+      rimScroller.querySelector('.scroll-box').appendChild(rimItem);
+    });
+    
+    // Append model details above the rims
+    rimScroller.querySelector('.scroll-box').insertAdjacentHTML('afterbegin', modelDetailsHTML);
+  }
+  
+  function highlightSelectedItem(selectedItem, itemClass, scrollerId) {
+    const scroller = document.getElementById(scrollerId);
+    document.querySelectorAll(`#${scrollerId} .${itemClass}`).forEach(function (item) {
+      item.style.display = (item !== selectedItem) ? 'none' : 'flex';
+    });
+  
+    let showAllButton = scroller.querySelector('.show-all-button');
+    if (showAllButton) {
+      showAllButton.remove();
+    }
+  
+    showAllButton = document.createElement('button');
+    showAllButton.classList.add('btn', 'btn-secondary', 'show-all-button');
+    showAllButton.textContent = 'Show All';
+    showAllButton.addEventListener('click', function () {
+      document.querySelectorAll(`#${scrollerId} .${itemClass}`).forEach(function (item) {
+        item.style.display = 'flex';
+      });
+      showAllButton.remove();
+    });
+    scroller.appendChild(showAllButton);
+  }
+  
+  function getModelsByBrand(brand) {
+    const models = {
+      'ABARTH': [
+{ id: '36454', name: '124 Spider', code: '348_', date: '2016 - heden' },
+{ id: '14669', name: '500 / 595 / 695', code: '312_', date: '2008 - heden' },
+{ id: '14670', name: '500C / 595C / 695C', code: '312_', date: '2008 - heden' },
+{ id: '44050', name: '500E Cabrio', code: '', date: '2023 - heden' },
+{ id: '44049', name: '500E Hatchback', code: '', date: '2023 - heden' },
+{ id: '14671', name: 'GRANDE PUNTO', code: '199_', date: '2007 - 2012' },
+{ id: '14673', name: 'PUNTO', code: '199_', date: '2012 - heden' },
+{ id: '38287', name: 'PUNTO EVO', code: '199_', date: '2008 - 2012' },
+{ id: '14674', name: 'STRADA', code: '138A_', date: '1981 - 1987' },
+],
+
+'ACURA': [
+{ id: '4403', name: 'INTEGRA Coupe', code: '', date: '1985 - 1990' },
+{ id: '4402', name: 'INTEGRA Hatchback', code: '', date: '1985 - 1990' },
+{ id: '4401', name: 'INTEGRA Saloon', code: '', date: '1985 - 1990' },
+{ id: '4404', name: 'LEGEND', code: '', date: '1986 - 1991' },
+{ id: '4405', name: 'LEGEND Coupe', code: '', date: '1987 - 1991' },
+{ id: '4406', name: 'LEGEND II', code: '', date: '1991 - 1996' },
+{ id: '4407', name: 'LEGEND II Coupe', code: '', date: '1991 - 1996' },
+{ id: '12814', name: 'MDX', code: 'YD3', date: '2013 - heden' },
+{ id: '10059', name: 'MDX', code: 'YD2', date: '2006 - heden' },
+{ id: '6092', name: 'MDX', code: 'YD1', date: '2000 - 2006' },
+{ id: '4409', name: 'NSX', code: '', date: '1990 - 2005' },
+{ id: '4410', name: 'NSX Targa', code: 'NA1', date: '1995 - 2005' },
+{ id: '10307', name: 'RDX', code: '', date: '2012 - 2018' },
+{ id: '7385', name: 'RDX', code: '', date: '2006 - 2012' },
+{ id: '6124', name: 'RL', code: '', date: '2004 - heden' },
+{ id: '6123', name: 'RL', code: '', date: '1995 - 2004' },
+{ id: '6129', name: 'RSX Coupe', code: 'DC_', date: '2001 - heden' },
+{ id: '10306', name: 'TL', code: 'UA9', date: '2009 - heden' },
+{ id: '6182', name: 'TL', code: 'UC_', date: '2003 - 2012' },
+{ id: '6181', name: 'TL', code: '', date: '1998 - 2003' },
+{ id: '13181', name: 'TLX', code: '', date: '2014 - heden' },
+{ id: '10305', name: 'TSX', code: 'CU_', date: '2009 - heden' },
+{ id: '6190', name: 'TSX', code: 'CL_', date: '2003 - 2008' },
+{ id: '6207', name: 'VIGOR', code: '', date: '1991 - 1994' },
+],
+
+'ALFA ROMEO': [
+{ id: '278', name: '145', code: '930_', date: '1994 - 2001' },
+{ id: '1321', name: '146', code: '930_', date: '1994 - 2001' },
+{ id: '4735', name: '147', code: '937_', date: '2000 - 2010' },
+{ id: '282', name: '155', code: '167_', date: '1992 - 1997' },
+{ id: '2053', name: '156', code: '932_', date: '1997 - 2005' },
+{ id: '4635', name: '156 Sportwagon', code: '932_', date: '1997 - 2006' },
+{ id: '5452', name: '159', code: '939_', date: '2005 - 2012' },
+{ id: '5543', name: '159 Sportwagon', code: '939_', date: '2005 - 2012' },
+{ id: '287', name: '164', code: '164_', date: '1987 - 1998' },
+{ id: '3891', name: '166', code: '936_', date: '1998 - 2007' },
+{ id: '1818', name: '1750-2000', code: '105_', date: '1968 - 1975' },
+{ id: '7546', name: '1900', code: '', date: '1950 - 1959' },
+{ id: '4626', name: '2300', code: '', date: '1974 - 1987' },
+{ id: '7549', name: '2600 Berlina', code: '', date: '1962 - 1969' },
+{ id: '7548', name: '2600 Spider', code: '106_', date: '1961 - 1965' },
+{ id: '7547', name: '2600 Sprint', code: '', date: '1962 - 1966' },
+{ id: '295', name: '33', code: '907A_', date: '1990 - 1994' },
+{ id: '291', name: '33', code: '905_', date: '1983 - 1993' },
+{ id: '305', name: '33 Sportwagon', code: '907B_', date: '1990 - 1994' },
+{ id: '300', name: '33 Sportwagon', code: '905A_', date: '1984 - 1989' },
+{ id: '11241', name: '4C', code: '960_', date: '2013 - heden' },
+{ id: '13239', name: '4C SPIDER', code: '961_', date: '2014 - heden' },
+{ id: '309', name: '6', code: '119_', date: '1979 - 1986' },
+{ id: '312', name: '75', code: '162B_', date: '1985 - 1992' },
+{ id: '9069', name: '8C', code: '920_', date: '2007 - 2009' },
+{ id: '9071', name: '8C SPIDER', code: '920_', date: '2008 - 2010' },
+{ id: '316', name: '90', code: '162_', date: '1984 - 1987' },
+{ id: '321', name: 'ALFASUD', code: '901_', date: '1972 - 1985' },
+{ id: '325', name: 'ALFASUD Giardinetta', code: '904_', date: '1978 - 1981' },
+{ id: '329', name: 'ALFASUD Sprint', code: '902_', date: '1976 - 1989' },
+{ id: '339', name: 'ALFETTA', code: '116_', date: '1974 - 1984' },
+{ id: '334', name: 'ALFETTA GT', code: '116_', date: '1974 - 1986' },
+{ id: '3848', name: 'AR 6 Box', code: '280_', date: '1985 - 1989' },
+{ id: '3847', name: 'AR 6 Bus', code: '280_', date: '1985 - 1989' },
+{ id: '3849', name: 'AR 8 Box', code: '280_', date: '1978 - 1989' },
+{ id: '353', name: 'ARNA', code: '920_', date: '1983 - 1986' },
+{ id: '30027', name: 'BERLINA', code: '105_', date: '1966 - 1977' },
+{ id: '5479', name: 'BRERA', code: '939_', date: '2006 - 2011' },
+{ id: '39009', name: 'DISCO VOLANTE', code: '', date: '2012 - heden' },
+{ id: '10046', name: 'F11 / F12 Box', code: '', date: '1967 - 1983' },
+{ id: '10045', name: 'F11 / F12 Bus', code: '', date: '1967 - 1983' },
+{ id: '36486', name: 'GIULIA', code: '952_', date: '2015 - heden' },
+{ id: '345', name: 'GIULIA', code: '105_', date: '1962 - 1979' },
+{ id: '3686', name: 'GIULIA GT', code: '', date: '1962 - 1980' },
+{ id: '10217', name: 'GIULIA SPIDER', code: '101_', date: '1962 - 1969' },
+{ id: '8603', name: 'GIULIETTA', code: '940_', date: '2010 - heden' },
+{ id: '483', name: 'GIULIETTA', code: '116_', date: '1977 - 1985' },
+{ id: '7551', name: 'GIULIETTA Berlina', code: '', date: '1955 - 1962' },
+{ id: '39004', name: 'GIULIETTA Box', code: '940_', date: '2011 - heden' },
+{ id: '7555', name: 'GIULIETTA Coupe', code: '', date: '1958 - 1961' },
+{ id: '7553', name: 'GIULIETTA Estate', code: '', date: '1957 - 1962' },
+{ id: '7552', name: 'GIULIETTA Spider', code: '', date: '1955 - 1962' },
+{ id: '7550', name: 'GIULIETTA Sprint', code: '', date: '1954 - 1962' },
+{ id: '7554', name: 'GIULIETTA Sprint Speciale', code: '', date: '1958 - 1961' },
+{ id: '5080', name: 'GT', code: '937_', date: '2003 - 2010' },
+{ id: '536', name: 'GT', code: '105_', date: '1963 - 1977' },
+{ id: '4625', name: 'GTA Coupe', code: '', date: '1968 - 1976' },
+{ id: '1460', name: 'GTV', code: '916_', date: '1994 - 2005' },
+{ id: '3389', name: 'GTV', code: '116_', date: '1978 - 1987' },
+{ id: '7556', name: 'MATTA Open Off-Road Vehicle', code: '', date: '1952 - 1954' },
+{ id: '7587', name: 'MITO', code: '955_', date: '2008 - heden' },
+{ id: '1819', name: 'MONTREAL', code: '105_', date: '1972 - 1979' },
+{ id: '9819', name: 'ROMEO 2 Box', code: '', date: '1956 - 1967' },
+{ id: '9818', name: 'ROMEO 2 Bus', code: '', date: '1956 - 1967' },
+{ id: '3602', name: 'RZ', code: '', date: '1992 - 1994' },
+{ id: '5567', name: 'SPIDER', code: '939_', date: '2006 - 2011' },
+{ id: '1461', name: 'SPIDER', code: '916_', date: '1994 - 2005' },
+{ id: '293', name: 'SPIDER', code: '115_', date: '1971 - 1993' },
+{ id: '289', name: 'SPIDER', code: '105_', date: '1966 - 1977' },
+{ id: '10181', name: 'SPIDER', code: '102_', date: '1958 - 1961' },
+{ id: '37292', name: 'STELVIO', code: '949_', date: '2016 - heden' },
+{ id: '3507', name: 'SZ', code: '', date: '1988 - 1994' },
+{ id: '42679', name: 'TONALE', code: '965_', date: '2022 - heden' }
+],
+'ALPINE': [
+{ id: '1610', name: '1300', date: '1970 - 1975' },
+{ id: '3928', name: '1600', date: '1969 - 1975' },
+{ id: '1609', name: 'A110 I', date: '1966 - 1970' },
+{ id: '38666', name: 'A110 II', date: '2017 - heden' },
+{ id: '1611', name: 'A310', date: '1971 - 1984' },
+{ id: '1613', name: 'A610', date: '1991 - 1995' },
+{ id: '1612', name: 'BERLINETTE', date: '1976 - 1977' },
+{ id: '3488', name: 'V6', date: '1985 - 1992' }
+],
+'ASTON MARTIN': [
+{ id: '9027', name: 'CYGNET', date: '2011 - 2013' },
+{ id: '36380', name: 'DB11 Vantage', date: '2016 - heden' },
+{ id: '38323', name: 'DB11 Volante', date: '2017 - heden' },
+{ id: '44427', name: 'DB12', date: '2023 - heden' },
+{ id: '1944', name: 'DB6 Vantage', date: '1964 - 1970' },
+{ id: '1945', name: 'DB6 Volante', date: '1964 - 1970' },
+{ id: '1958', name: 'DB7 Vantage', date: '1994 - 2003' },
+{ id: '1959', name: 'DB7 Volante', date: '1995 - 2003' },
+{ id: '5091', name: 'DB9 Vantage', date: '2004 - 2016' },
+{ id: '5092', name: 'DB9 Volante', date: '2004 - 2016' },
+{ id: '39224', name: 'DBS Coupe', date: '2018 - heden' },
+{ id: '8926', name: 'DBS Vantage', date: '2007 - heden' },
+{ id: '1946', name: 'DBS Vantage', date: '1966 - 1972' },
+{ id: '39592', name: 'DBS Volante', date: '2019 - heden' },
+{ id: '8928', name: 'DBS Volante', date: '2007 - heden' },
+{ id: '40521', name: 'DBX', date: '2019 - heden' },
+{ id: '1947', name: 'LAGONDA ?', date: '1976 - 1997' },
+{ id: '1948', name: 'LAGONDA ? Shooting Brake', date: '1976 - 1997' },
+{ id: '9542', name: 'ONE-77', date: '2010 - 2012' },
+{ id: '8544', name: 'RAPIDE', date: '2010 - heden' },
+{ id: '1949', name: 'TICKFORD CAPRI', date: '1982 - 1985' },
+{ id: '42781', name: 'V12 SPEEDSTER', date: '2021 - heden' },
+{ id: '1950', name: 'V8 Vantage', date: '1969 - 1993' },
+{ id: '1951', name: 'V8 Volante', date: '1978 - 1989' },
+{ id: '10732', name: 'VANQUISH Vantage', date: '2012 - heden' },
+{ id: '4799', name: 'VANQUISH Vantage (R2_)', date: '2001 - 2007' },
+{ id: '11586', name: 'VANQUISH Volante', date: '2013 - heden' },
+{ id: '38324', name: 'VANTAGE Coupe', date: '2017 - heden' },
+{ id: '40547', name: 'VANTAGE Roadster', date: '2020 - heden' },
+{ id: '6393', name: 'VANTAGE Vantage', date: '2005 - heden' },
+{ id: '6394', name: 'VANTAGE Volante', date: '2007 - heden' },
+{ id: '1957', name: 'VIRAGE Limited Edition Vantage', date: '1995 - 1995' },
+{ id: '1956', name: 'VIRAGE Saloon', date: '1994 - 1995' },
+{ id: '1955', name: 'VIRAGE Shooting Brake', date: '1993 - 1995' },
+{ id: '9540', name: 'VIRAGE Vantage', date: '2011 - heden' },
+{ id: '3956', name: 'VIRAGE Vantage', date: '1992 - 2000' },
+{ id: '1954', name: 'VIRAGE Vantage', date: '1987 - 1992' },
+{ id: '9541', name: 'VIRAGE Volante', date: '2011 - 2014' },
+{ id: '3914', name: 'VIRAGE Volante', date: '1990 - 2000' },
+{ id: '10197', name: 'ZAGATO Vantage', date: '2012 - heden' },
+{ id: '1952', name: 'ZAGATO Vantage', date: '1986 - 1989' }
+]
+,
+'AUDI':[
+{ name: 'A1', code: '', years: '2010 - heden' },
+{ name: 'A3', code: '', years: '1996 - heden' },
+{ name: 'A4', code: '', years: '1994 - heden' },
+{ name: 'A5', code: '', years: '2007 - heden' },
+{ name: 'A6', code: '', years: '1994 - heden' },
+{ name: 'A7', code: '', years: '2010 - heden' },
+{ name: 'A8', code: '', years: '1994 - heden' },
+{ name: 'Q2', code: '', years: '2016 - heden' },
+{ name: 'Q3', code: '', years: '2011 - heden' },
+{ name: 'Q5', code: '', years: '2008 - heden' },
+{ name: 'Q7', code: '', years: '2005 - heden' },
+{ name: 'Q8', code: '', years: '2018 - heden' },
+{ name: 'TT', code: '', years: '1998 - heden' },
+{ name: 'R8', code: '', years: '2006 - heden' }
+
+],
+'BENTLY' :[
+{ name: 'ARNAGE', code: '(RBS_)', years: '1998 - 2013' },
+{ name: 'ARNAGE Coupe', code: '', years: '2005 - heden' },
+{ name: 'AZURE', code: '', years: '1995 - 2006' },
+{ name: 'AZURE II', code: '(RBS_)', years: '2006 - heden' },
+{ name: 'BENTAYGA', code: '(4V1)', years: '2015 - heden' },
+{ name: 'BROOKLANDS', code: '', years: '1992 - 1997' },
+{ name: 'BROOKLANDS Coupe', code: '(RBS_)', years: '2008 - heden' },
+{ name: 'CONTINENTAL', code: '', years: '1991 - 2002' },
+{ name: 'CONTINENTAL Cabrio', code: '(3S_)', years: '2018 - heden' },
+{ name: 'CONTINENTAL Cabrio', code: '', years: '2006 - heden' },
+{ name: 'CONTINENTAL Cabrio', code: '', years: '1989 - 1995' },
+{ name: 'CONTINENTAL Cabrio', code: '', years: '1984 - 1990' },
+{ name: 'CONTINENTAL Coupe', code: '(3S3)', years: '2017 - heden' },
+{ name: 'CONTINENTAL Coupe', code: '(393)', years: '2003 - heden' },
+{ name: 'CONTINENTAL FLYING SPUR', code: '(3W_)', years: '2005 - 2013' },
+{ name: 'CORNICHE Cabrio', code: '', years: '1971 - 1984' },
+{ name: 'CORNICHE Coupe', code: '', years: '1971 - 1984' },
+{ name: 'EIGHT', code: '', years: '1984 - 1992' },
+{ name: 'FLYING SPUR', code: '(ZG2_)', years: '2019 - heden' },
+{ name: 'FLYING SPUR', code: '(4W_)', years: '2013 - heden' },
+{ name: 'MULSANNE', code: '(3Y_)', years: '2009 - heden' },
+{ name: 'MULSANNE', code: '', years: '1980 - 1992' },
+{ name: 'T1 SERIES Saloon', code: '', years: '1965 - 1976' },
+{ name: 'T2 SERIES Saloon', code: '', years: '1976 - 1981' },
+{ name: 'TURBO R', code: '', years: '1985 - 1998' }
+],
+
+'BMW':[  { name: '1 SERIE', code: '(F40)', years: '2019 - heden' },
+{ name: '1 SERIE', code: '(F21)', years: '2011 - heden' },
+{ name: '1 SERIE', code: '(F20)', years: '2011 - 2019' },
+{ name: '1 SERIE', code: '(E81)', years: '2006 - 2012' },
+{ name: '1 SERIE', code: '(E87)', years: '2003 - 2013' },
+{ name: '1 SERIE Coupe', code: '(E82)', years: '2006 - 2013' },
+{ name: '2 SERIE Active Tourer', code: '(U06)', years: '2021 - heden' },
+{ name: '2 SERIE Active Tourer', code: '(F45)', years: '2013 - heden' },
+{ name: '2 SERIE Coupe', code: '(G42)', years: '2021 - heden' },
+{ name: '2 SERIE Coupe', code: '(F87)', years: '2012 - heden' },
+{ name: '2 SERIE Gran Coupe', code: '(F44)', years: '2019 - heden' },
+{ name: '2 SERIE Gran Tourer', code: '(F46)', years: '2014 - heden' },
+{ name: '3 SERIE', code: '(G20)', years: '2018 - heden' },
+{ name: '3 SERIE', code: '(F30)', years: '2011 - 2018' },
+{ name: '3 SERIE', code: '(E90)', years: '2004 - 2012' },
+{ name: '3 SERIE', code: '(E46)', years: '1997 - 2005' },
+{ name: '3 SERIE', code: '(E36)', years: '1990 - 1998' },
+{ name: '3 SERIE', code: '(E30)', years: '1982 - 1992' },
+{ name: '3 SERIE', code: '(E21)', years: '1975 - 1984' },
+{ name: '3 SERIE Coupe', code: '(E46)', years: '1998 - 2006' },
+{ name: '3 SERIE Coupe', code: '(E36)', years: '1991 - 1999' },
+{ name: '3 SERIE Gran Turismo', code: '(F34)', years: '2012 - heden' },
+{ name: '4 SERIE Coupe', code: '(G22)', years: '2020 - heden' },
+{ name: '4 SERIE Coupe', code: '(F32)', years: '2013 - heden' },
+{ name: '4 SERIE Gran Coupe', code: '(G26)', years: '2021 - heden' },
+{ name: '4 SERIE Gran Coupe', code: '(F36)', years: '2014 - heden' },
+{ name: '5 SERIE', code: '(G60)', years: '2023 - heden' },
+{ name: '5 SERIE', code: '(G30,G31)', years: '2016 - heden' },
+{ name: '5 SERIE', code: '(F10,F11)', years: '2009 - 2016' },
+{ name: '5 SERIE', code: '(E60,E61)', years: '2001 - 2010' },
+{ name: '5 SERIE', code: '(E39)', years: '1995 - 2003' },
+{ name: '5 SERIE', code: '(E34)', years: '1987 - 1995' },
+{ name: '5 SERIE', code: '(E28)', years: '1981 - 1987' },
+{ name: '5 SERIE', code: '(E12)', years: '1972 - 1981' },
+{ name: '5 SERIE Gran Turismo', code: '(F07)', years: '2009 - 2017' },
+{ name: '6 SERIE', code: '(E63)', years: '2003 - 2010' },
+{ name: '6 SERIE', code: '(E24)', years: '1975 - 1989' },
+{ name: '6 SERIE Coupe', code: '(F13)', years: '2011 - 2017' },
+{ name: '6 SERIE Gran Coupe', code: '(F06)', years: '2012 - 2018' },
+{ name: '6 SERIE Gran Turismo', code: '(G32)', years: '2017 - heden' },
+{ name: '7 SERIE', code: '(G70)', years: '2022 - heden' },
+{ name: '7 SERIE', code: '(G12)', years: '2015 - heden' },
+{ name: '7 SERIE', code: '(F04)', years: '2008 - 2015' },
+{ name: '7 SERIE', code: '(E67)', years: '2001 - 2009' },
+{ name: '7 SERIE', code: '(E38)', years: '1994 - 2001' },
+{ name: '7 SERIE', code: '(E32)', years: '1985 - 1994' },
+{ name: '7 SERIE', code: '(E23)', years: '1977 - 1988' },
+{ name: '8 SERIE', code: '(E31)', years: '1990 - 1999' },
+{ name: '8 SERIE Coupe', code: '(F92)', years: '2018 - heden' },
+{ name: '8 SERIE Gran Coupe', code: '(F93)', years: '2019 - heden' },
+{ name: 'i3', code: '(I01)', years: '2013 - heden' },
+{ name: 'i4', code: '(G26)', years: '2021 - heden' },
+{ name: 'i8', code: '(I12)', years: '2014 - 2020' },
+{ name: 'i8 Roadster', code: '(I15)', years: '2018 - 2020' },
+{ name: 'iX', code: '(I20)', years: '2021 - heden' },
+{ name: 'iX3', code: '(G08)', years: '2020 - heden' },
+{ name: 'M1', code: '(E26)', years: '1979 - 1983' },
+{ name: 'X1', code: '(U11)', years: '2022 - heden' },
+{ name: 'X1', code: '(F48)', years: '2014 - heden' },
+{ name: 'X1', code: '(E84)', years: '2009 - 2015' },
+{ name: 'X2', code: '(F39)', years: '2017 - heden' },
+{ name: 'X3', code: '(F97)', years: '2017 - heden' },
+{ name: 'X3', code: '(F25)', years: '2010 - 2017' },
+{ name: 'X3', code: '(E83)', years: '2003 - 2011' },
+{ name: 'X4', code: '(F98)', years: '2018 - heden' },
+{ name: 'X4', code: '(F26)', years: '2013 - 2018' },
+{ name: 'X5', code: '(F95)', years: '2018 - heden' },
+{ name: 'X5', code: '(F85)', years: '2013 - 2018' },
+{ name: 'X5', code: '(E70)', years: '2006 - 2013' },
+{ name: 'X5', code: '(E53)', years: '2000 - 2006' },
+{ name: 'X6', code: '(F96)', years: '2019 - heden' },
+{ name: 'X6', code: '(F86)', years: '2014 - 2019' },
+{ name: 'X6', code: '(E72)', years: '2007 - 2014' },
+{ name: 'X7', code: '(G07)', years: '2019 - heden' },
+{ name: 'XM', code: '(G09)', years: '2022 - heden' },
+{ name: 'Z1 Roadster', code: '', years: '1988 - 1991' },
+{ name: 'Z3 Coupe', code: '(E36)', years: '1997 - 2003' },
+{ name: 'Z3 Roadster', code: '(E36)', years: '1995 - 2003' },
+],
+
+'CADILLAC':[
+{ id: '5860', name: 'ALLANTE Cabrio', date: '1985 - 1993' },
+{ id: '5861', name: 'ALLANTE Coupe', date: '1991 - 1993' },
+{ id: '11211', name: 'ATS', date: '2013 - heden' },
+{ id: '13025', name: 'ATS Coupe', date: '2013 - heden' },
+{ id: '6398', name: 'BLS', date: '2006 - heden' },
+{ id: '6721', name: 'BLS Wagon', date: '2007 - heden' },
+{ id: '30525', name: 'BROUGHAM Saloon', date: '1986 - 1992' },
+{ id: '30530', name: 'CIMARRON Saloon', date: '1981 - 1988' },
+{ id: '14831', name: 'CT6', date: '2015 - heden' },
+{ id: '11758', name: 'CTS', date: '2013 - heden' },
+{ id: '6723', name: 'CTS', date: '2007 - heden' },
+{ id: '4861', name: 'CTS', date: '2002 - 2007' },
+{ id: '13022', name: 'CTS Coupe', date: '2013 - heden' },
+{ id: '9018', name: 'CTS Coupe', date: '2008 - heden' },
+{ id: '13023', name: 'CTS Sport Wagon', date: '2013 - heden' },
+{ id: '9019', name: 'CTS Sport Wagon', date: '2008 - heden' },
+{ id: '5984', name: 'DEVILLE', date: '1999 - 2005' },
+{ id: '5983', name: 'DEVILLE', date: '1993 - 1999' },
+{ id: '5982', name: 'DEVILLE', date: '1989 - 1993' },
+{ id: '34947', name: 'DEVILLE Coupe', date: '1984 - 1993' },
+{ id: '34946', name: 'DEVILLE Coupe', date: '1976 - 1984' },
+{ id: '34943', name: 'DEVILLE Saloon', date: '1984 - 1988' },
+{ id: '34942', name: 'DEVILLE Saloon', date: '1976 - 1984' },
+{ id: '7395', name: 'DTS', date: '2005 - 2011' },
+{ id: '30541', name: 'ELDORADO Cabrio', date: '1974 - 1976' },
+{ id: '4599', name: 'ELDORADO Coupe', date: '1991 - 2002' },
+{ id: '5992', name: 'ELDORADO Coupe', date: '1987 - 1991' },
+{ id: '34950', name: 'ELDORADO Coupe', date: '1985 - 1991' },
+{ id: '34949', name: 'ELDORADO Coupe', date: '1978 - 1985' },
+{ id: '30542', name: 'ELDORADO Coupe', date: '1970 - 1978' },
+{ id: '13027', name: 'ELR', date: '2013 - 2016' },
+{ id: '14112', name: 'ESCALADE', date: '2014 - heden' },
+{ id: '7396', name: 'ESCALADE', date: '2006 - 2014' },
+{ id: '3900', name: 'ESCALADE', date: '1998 - 2006' },
+{ id: '34836', name: 'ESCALADE Crew Cab Pickup', date: '2006 - 2014' },
+{ id: '30543', name: 'ESCALADE Crew Cab Pickup', date: '2001 - 2006' },
+{ id: '9631', name: 'ESCALADE Pickup', date: '2006 - heden' },
+{ id: '34955', name: 'FLEETWOOD Coupe', date: '1988 - 1992' },
+{ id: '35801', name: 'FLEETWOOD Coupe', date: '1979 - 1986' },
+{ id: '6005', name: 'FLEETWOOD Saloon', date: '1992 - 1997' },
+{ id: '14567', name: 'FLEETWOOD Saloon', date: '1988 - 1993' },
+{ id: '14566', name: 'FLEETWOOD Saloon', date: '1984 - 1988' },
+{ id: '30548', name: 'FLEETWOOD Saloon', date: '1976 - 1986' },
+{ id: '30546', name: 'FLEETWOOD Saloon', date: '1968 - 1976' },
+{ id: '4585', name: 'SEVILLE', date: '1997 - 2004' },
+{ id: '6908', name: 'SEVILLE (6K_)', date: '1992 - 1997' },
+{ id: '1987', name: 'SEVILLE Mk II (K)', date: '1985 - 1991' },
+{ id: '34961', name: 'SEVILLE Saloon', date: '1979 - 1985' },
+{ id: '30577', name: 'SEVILLE Saloon', date: '1975 - 1979' },
+{ id: '9561', name: 'SRX', date: '2009 - heden' },
+{ id: '5161', name: 'SRX', date: '2003 - 2009' },
+{ id: '13178', name: 'STS', date: '2007 - 2012' },
+{ id: '5478', name: 'STS', date: '2004 - 2007' },
+{ id: '5121', name: 'XLR', date: '2003 - 2009' },
+{ id: '38607', name: 'XT4', date: '2018 - heden' },
+{ id: '36528', name: 'XT5', date: '2016 - heden' },
+{ id: '10623', name: 'XTS', date: '2011 - heden' }
+
+
+],
+'CHEVROLET':[],
+
+
+      // Add more brands and models as needed
+    };
+    return models[brand] || [];
+  }
+  
+  function getRimsByModel(model) {
+    const rims = {
+      // '124 Spider': [
+      //   { name: 'Rim 1' },
+      //   { name: 'Rim 2' },
+      //   { name: 'Rim 3' }
+      // ],
+      // Add more rims for other models
+    };
+    return rims[model] || [];
+  }
+  </script>
+
+  <script>
+      document.getElementById('searchRimsBtn').addEventListener('click', function() {
+// Select all elements with the class 's1'
+var elements = document.querySelectorAll('.s1');
+
+// Iterate through each element and hide it
+elements.forEach(function(element) {
+  element.style.display = 'none';
+});
+
+// Show the elements again after 3 seconds (3000 milliseconds)
+setTimeout(function() {
+  elements.forEach(function(element) {
+      element.style.display = 'block';
+  });
+}, 5000);
+});
+
+  </script>
+
+
+    <!--  some stuff with boxes -->
+    <div  class="soemstuffwithboxex"
+      style="margin-top: 0px; margin-bottom: 0px; padding-bottom: 5px"
+    >
+      <div class="container" style="margin-top: 0px; justify-content: center">
+        <div class="row">
+          <div
+            class="col-12 section-heading"
+            style="padding: 0px; justify-content: center; margin-left: 15px"
+          >
+            <p
+              class="section-heading__title"
+              style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+            >
+              Why Choose <b>US?</b>
+            </p>
+          </div>
+        </div>
+
+        <div class="row" style="justify-content: center">
+          <div
+            class="col-sm-6 col-md-4 col-lg-3"
+            style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+          >
+            <div
+              class="usp animated flipInY delay-750 go"
+              style="justify-content: center"
+            >
+              <div
+                class="icon"
+                style="color: #ea7032; margin-bottom: 10px; font-size: 50px"
+              >
+                <i
+                  class="fa fa-star-o"
+                  aria-hidden="true"
+                  style="justify-content: center"
+                ></i>
+              </div>
+              <div
+                class="title"
+                style="
+                  color: #ea7032;
+                  margin-bottom: 10px;
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                UNPRECEDENTED SERVICE
+              </div>
+              <div
+                class="description"
+                style="
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                Service as you have not experienced it before, we ensure
+                satisfaction, guaranteed
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="usp animated flipInY delay-1000 go">
+              <div class="icon" style="color: #ea7032; margin-bottom: 10px">
+                <i class="fa fa-sitemap" aria-hidden="true"></i>
+              </div>
+              <div
+                class="title"
+                style="
+                  color: #ea7032;
+                  margin-bottom: 10px;
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                WIDE RANGE
+              </div>
+              <div
+                class="description"
+                style="
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                We offer a very wide range of rims, tires and accessories. Offer
+                for everyone's taste and preference
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="usp animated flipInY delay-1250 go">
+              <div class="icon" style="color: #ea7032; margin-bottom: 10px">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </div>
+              <div
+                class="title"
+                style="
+                  color: #ea7032;
+                  margin-bottom: 10px;
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                Safe
+              </div>
+              <div
+                class="description"
+                style="
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                We have certified professionals, not only in the suspension but
+                throughout the car
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="usp animated flipInY delay-1500 go">
+              <div class="icon" style="color: #ea7032; margin-bottom: 10px">
+                <i class="fa fa-eur" aria-hidden="true"></i>
+              </div>
+              <div
+                class="title"
+                style="
+                  color: #ea7032;
+                  margin-bottom: 10px;
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                Sharp Prices
+              </div>
+              <div
+                class="description"
+                style="
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                You can rest assured that we have the best prices in the world
+                Benelux.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- some texty stuff -->
+    <div class="sometextystuff" style="background-color: #ffffff">
+      <div class="container snipcss-oneT7">
+        <div
+          class="info-addition read-more"
+          onclick="this.classList.add('expanded')"
+        >
+          <h1 class="info-addition__intro-headline" style="color: black">
+            Alloys and complete wheels at jouwvelgen.nl, the best alloy shop!
+          </h1>
+          <p
+            class="info-addition__intro-text content"
+            style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+          >
+            Find the ideal aluminum rim for your automobile among over 1,000
+            options available for purchase online. To use the 3D rim
+            configurator, simply enter your car information, choose a rim, and
+            view it. Thanks to our expert. Advice with an all-around carefree
+            guarantee! With the correct tyres, it's a well-rounded affair. We
+            expertly mount and balance your whole wheels and bring them to you
+            ready to attach. Compare rims and read user reviews to determine the
+            best alloy wheels for your vehicle. We hope you enjoy selecting your
+            new rims and complete wheels.
+          </p>
+          <!-- <span class="read-more__trigger visible-xs">read more</span> -->
+        </div>
+        <!-- <div class="row" style="display: flex;"> -->
+        <div class="row">
+          <div
+            class="col-xs-12 col-md-4 col-lg-12 section-heading"
+            style="margin-bottom: 20px"
+          >
+            <p
+              class="section-heading__title"
+              style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+            >
+              Rim Markers
+              <b style="margin-left: 10px; margin-top: 4px">To Discover</b>
+            </p>
+          </div>
+          <div class="col-lg-6 col-sm-12 col-md-6" data-banner-position-id="1">
+            <div
+              style="position: relative; display: inline-block; margin: 10px"
+            >
+              <img
+                src="homepage/testimage3.jpg"
+                alt="Image"
+                style="width: auto; height: auto"
+              />
+              <div
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  color: white;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  padding: 10px;
+                  margin: 0px;
+                  font-size: 30px;
+                  max-width: 300px;
+                  min-width: 100px;
+                  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                "
+              >
+                COMPLETE SET , PLUGS AND PLAY
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-sm-12 col-md-6" data-banner-position-id="2">
+            <!-- <div class="image-banner image-banner--2 border">
+                  <a title="Discover Alutec" href="alloy-wheels-tyres/alutec_ff_16_486">
+                      <span class="txt">Discover more</span>
+                      <picture>
+                          <img src="Images/banners/continental-tires-winter.jpeg"
+                              alt="Discover rims of the brand Alutec in our shop." title="Alutec alloy wheels"
+                              class="lazy loaded"
+                              src="https://www.felgenoutlet.com/files/banners/4739/desktop/alutec.jpeg?1709214869"
+                              data-was-processed="true">
+                      </picture>
+                      <span class="more-info-btn-banner"> Learn more <span class="arrow-white">
+                              <i class="fo-icon fo-arrow-right"></i>
+                          </span>
+                      </span>
+                  </a>
+              </div> -->
+            <div class="image-banner image-banner-1">
+              <div
+                style="position: relative; display: inline-block; margin: 10px"
+              >
+                <img
+                  src="homepage/testimage2.jpg"
+                  alt="Image"
+                  style="width: auto; height: auto"
+                />
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding: 10px;
+                    margin: 0px;
+                    font-size: 25px;
+                    width: auto;
+                    min-width: 100px;
+                    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                  "
+                >
+                  GRIP BIJ ALLE WEERS OMSTANDGHEDEN
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- rim brands slider -->
+        <div class="tslider">
+          <nav class="navbartslider">
+            <!-- <div class="logo-containertslider"> -->
+            <!-- <img alt="Logo" class="logotslider" src="https://www.jouwvelgen.nl/public/jouwvelgen.nl/assets/images/general/logos/logo.png" /> -->
+            <!-- </div> -->
+          </nav>
+
+          <p
+            class="section-heading__title"
+            style="margin-top: 20px; margin-bottom: 20px"
+          >
+            Rim <b>Brands</b>
+          </p>
+          <!-- </div> -->
+          <div class="containertslider mt-5">
+            <div class="carouseltslider">
+              <div class="carousel-innertslider">
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-1.png"
+                    alt="Image 1"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/rim-brands/Keskin_35px.png"
+                    alt="Image 2"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/rim-brands/R3Wheels_35px.png"
+                    alt="Image 2"
+                  />
+                </div>
+
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-2-grey.png"
+                    alt="Image 3"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-3-grey.png"
+                    alt="Image 4"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img src="homepage/rim-brands/MAM_35px.png" alt="Image 5" />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-5-grey.png"
+                    alt="Image 6"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-2.png"
+                    alt="Image 4"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-6.png"
+                    alt="Image 5"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/rim-brands/brand-6-grey.png"
+                    alt="Image 6"
+                  />
+                </div>
+              </div>
+              <!-- <div class="carousel-controlstslider"> -->
+              <!-- <a class="carousel-control left" onclick="prevSlide()">
+                      &#10094;
+                  </a>
+                  <a class="carousel-control right" onclick="prevSlide()">
+                      &#10095;
+                  </a> -->
+              <!-- <button class="carousel-control right" onclick="nextSlide()"> -->
+              <!-- &#10095; -->
+              <!-- </button> -->
+
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-xs-12 col-md-4 col-lg-12 section-heading"
+            style="margin-bottom: 20px"
+          >
+            <p class="section-heading__title">
+              TIRE BRANDS
+              <b style="margin-left: 10px; margin-top: 4px">To Discover</b>
+            </p>
+          </div>
+          <div class="col-lg-6 col-sm-12 col-md-6" data-banner-position-id="1">
+            <div
+              style="position: relative; display: inline-block; margin: 10px"
+            >
+              <img
+                src="homepage/testimage2.jpg"
+                alt="Image"
+                style="width: auto; height: auto"
+              />
+              <div
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  color: white;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  padding: 10px;
+                  margin: 0px;
+                  font-size: 30px;
+                  max-width: 300px;
+                  min-width: 100px;
+                "
+              >
+                COMPLETE SET , PLUGS AND PLAY
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-sm-12 col-md-6" data-banner-position-id="2">
+            <div class="image-banner image-banner-1">
+              <div
+                style="position: relative; display: inline-block; margin: 10px"
+              >
+                <img
+                  src="homepage/testimage1.jpg"
+                  alt="Image"
+                  style="width: auto; height: auto"
+                />
+                <!-- <div style="position: absolute; bottom: 0; left: 0; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 10px; margin: 0PX; font-size: 25px;  width:auto; min-width: 100px;">
+                      ANBAUFERTIGE KOMPLETTRADER
+                    </div> -->
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 30px;
+                    right: 0;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding: 5px;
+                    margin: 5px;
+                    font-size: 30px;
+                    width: auto;
+                    min-width: 100px;
+                  "
+                >
+                  ANBAUFERTIGE KOMPLETTRADER
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tslider for rims  end-->
+
+        <!-- yahann per tyres ka brnad ka slider lagana ha  -->
+        <!--  slider for tyre brands -->
+        <div class="tslider">
+          <nav class="navbartslider">
+            <!-- <div class="logo-containertslider" style="background-color: #333;"> -->
+            <!-- <img alt="Logo" class="logotslider" -->
+            <!-- src="https://www.jouwvelgen.nl/public/jouwvelgen.nl/assets/images/general/logos/logo.png" /> -->
+            <!-- </div> -->
+          </nav>
+          <!-- <h2>Tyre brands</h2> -->
+          <p
+            class="section-heading__title"
+            style="margin-top: 20px; margin-bottom: 20px"
+          >
+            Tyre <b>Brands</b>
+          </p>
+
+          <div class="containertslider mt-5">
+            <div class="carouseltslider">
+              <div class="carousel-innertslider">
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-1.png"
+                    alt="Image 1"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-2.png"
+                    alt="Image 2"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-3.png"
+                    alt="Image 3"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-4.png"
+                    alt="Image 4"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-5.png"
+                    alt="Image 5"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-6.png"
+                    alt="Image 6"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-1-grey.png"
+                    alt="Image 4"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-2-grey.png"
+                    alt="Image 5"
+                  />
+                </div>
+                <div class="carousel-itemtslider">
+                  <img
+                    src="homepage/partners/tire-brands/brand-3-grey.png"
+                    alt="Image 6"
+                  />
+                </div>
+              </div>
+
+              <!-- <a class="carousel-control left" onclick="prevSlide()">
+                      &#10094;
+                  </a>
+                  <a class="carousel-control right" onclick="prevSlide()">
+                      &#10095;
+                  </a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div></div>
+
+    
+    <div class="container snipcss-JSTX9">
+      <!-- <p class="section-title"><b>social </b>media</p> -->
+      <p
+        class="section-heading__title"
+        style="
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        "
+      >
+        social <b>Media</b>
+      </p>
+
+      <img
+        src="Images/mockup-devices/mockup-website-on-device.png"
+        width="100%"
+        alt="social media"
+      />
+      <div
+        class="fullwidth-banner-heading"
+        style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+      >
+        <!-- <h2 class="hide-on-small-screen" style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; ">Follow us on Social media</h2> -->
+        <div
+          class="fullwidth-banner-tag-line"
+          style="
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin-top: -10px;
+          "
+        >
+          Voor nieuws, deals en ontwikkelingen bekijk ook onze social media
+          kanalen.
+        </div>
+        <a
+          href="https://web.facebook.com/profile.php?id=100070203967597"
+          class="fa fa-facebook"
+          aria-hidden="true"
+        ></a>
+        <a
+          href="https://www.instagram.com/jouwvelgen.nl"
+          class="fa fa-instagram"
+          aria-hidden="true"
+        ></a>
+      </div>
+    </div>
+
+    <!-- recent orders -->
+
+    <div class="container">
+      <div
+        class="col-12 section-heading"
+        style="
+          padding: 20px;
+          justify-content: center;
+          margin-top: 30px;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        "
+      >
+        <p
+          class="section-heading__title"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          Recent <b>Orders</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center my-4">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+            <div class="col img-container">
+              <img
+                src="homepage/gallery-photo-1.jpg"
+                class="img-fluid"
+                alt="Image 1"
+              />
+            </div>
+            <div class="col img-container">
+              <img
+                src="homepage/gallery-photo-2.jpg"
+                class="img-fluid"
+                alt="Image 2"
+              />
+            </div>
+            <div class="col img-container">
+              <img
+                src="homepage/gallery-photo-3.jpg"
+                class="img-fluid"
+                alt="Image 3"
+              />
+            </div>
+            <div class="col img-container">
+              <img
+                src="homepage/gallery-photo-4.jpg"
+                class="img-fluid"
+                alt="Image 4"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- testimonials -->
+    <div class="container">
+      <div
+        class="col-12 section-heading"
+        style="padding: 20px; justify-content: center; margin-top: 30px"
+      >
+        <p
+          class="section-heading__title"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          what our customers <b>say?</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div
+        class="testimonials-container"
+        style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+      >
+        <div class="testimonial">
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "Absolutely love the quality of the alloys! My car looks amazing."
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div
+          class="testimonial"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "Great service and fast delivery. Highly recommend Jouwvelgen!"
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div
+          class="testimonial"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "The rims are top-notch. Definitely worth the price."
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div
+          class="testimonial"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "Excellent quality and the design is perfect for my car."
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div
+          class="testimonial"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "Loving the new look of my car with these rims!"
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div
+          class="testimonial"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "High quality and stylish rims. Very happy with my purchase."
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div
+          class="testimonial"
+          style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+        >
+          <p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif">
+            "Fantastic customer support and excellent rims."
+          </p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </div>
+
+    <div class="container snipcss-tVrrQ">
+      <!-- <p class="section-title"><b>bedrijfslocatie</b></p> -->
+      <!-- <p class="section-title" style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif"><b>Our Location</b></p> -->
+      <!-- <p class="section-title" style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif"><b>Our Location</b></p> -->
+      <div class="container">
+        <div
+          class="col-12 section-heading"
+          style="padding: 10px; justify-content: center; margin-top: 20px"
+        >
+          <p class="section-heading__title">Our <b>Location</b></p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe
+          width="100%"
+          height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=5.070190429687501%2C51.54610319308197%2C5.07270097732544%2C51.547230763853754&amp;layer=mapnik&amp;marker=51.54666698196084%2C5.07144570350647"
+          id="style-6GGLC"
+          class="style-6GGLC"
+        >
+        </iframe
+        ><br /><small> </small>
+      </div>
+      <small> </small>
+    </div>
+
+    <!-- footer  adding-->
+    <div
+      class="footer"
+      style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+    >
+      <div
+        class="row"
+        style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+      >
+        <div class="col">
+          <!-- <img src="Images/Jouwlogo.png" class="footer_logo" style="height: 30%; width: 50%; margin-top: 20px; margin-bottom: 20px; margin-left: 20px;"> -->
+          <!-- <img src="logosandimages/logo.png" > -->
+          <img src="logosandimages/logo.png" class="footer_logo" />
+          <p
+            class="footer_about"
+            style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif"
+          >
+            We are happy to receive you at our office in Tilburg where you can
+            get personal advice from our experienced technicians and see our
+            working method with your own eyes. We are happy to discuss the many
+            possibilities that we can offer you
+          </p>
+        </div>
+        <div class="col">
+          <h3>
+            Office
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p>Cape Coloniestraat 39-A 5025 BT Tilburg</p>
+          <p>Netherland</p>
+          <p>LODZ ZIP 98780, Netherlands</p>
+          <!-- <p class="footer_email">info@jouwvelgen.nl</p> -->
+          <h4>(+ 31) 13 302 01 94</h4>
+          <!-- <h4>(+ 31) 6 417 932 48</h4> -->
+          <!-- <h5><a style="font-size: larger; color: beige;">WORKING DAYS</a></h5> -->
+          <!-- <li><a>MON-FRIDAY / 9:00 AM - 5:00 PM </a></li> -->
+          <!-- <li><a>SAT / 12:00 - 17:00 </a></li> -->
+        </div>
+        <div class="col">
+          <h3>
+            Working method
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <!-- <ul> -->
+          <p>Personal advice</p>
+          <p>Fast assembly</p>
+          <p>No Hidden Costs</p>
+          <p>Low Prices</p>
+          <!-- </ul> -->
+        </div>
+        <div class="col">
+          <h3>
+            Newsletter
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <form style="max-width: 150px">
+            <ion-icon class="icon" name="mail"></ion-icon>
+            <input type="email" placeholder="Enter your email" required />
+            <!-- <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button> -->
+            <!-- <button type="submit"></button> -->
+          </form>
+          <!-- <div class="social_icons"> -->
+          <!-- <ion-icon class="social_icon" name="logo-facebook"></ion-icon> -->
+          <!-- <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon> -->
+          <!-- <ion-icon class="social_icon" name="logo-twitter"></ion-icon> -->
+          <!-- <ion-icon class="social_icon" name="logo-instagram"></ion-icon> -->
+          <!-- </div> -->
+        </div>
+
+        <!-- testing  -->
+        <div class="col">
+          <h3>
+            About Jouvwelgen
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <!-- <ul> -->
+          <p>Philosophy</p>
+          <p>History</p>
+          <p>Locations</p>
+          <p>Team</p>
+          <!-- </ul> -->
+        </div>
+
+        <div class="col">
+          <h3>
+            Payment Methods
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <!-- <ul> -->
+          <!-- <li><a  href="">easypaisa </a></li>
+                <li><a href="">jc</a></li>
+                <li><a href="">paypall</a></li>
+                <li><a href="">palpay</a></li> -->
+
+          <span>
+            <img
+              src="logosandimages/payment-method-1.png"
+              style="width: 70px; height: 40px"
+          /></span>
+          <span>
+            <img
+              src="logosandimages/payment-method-2.png"
+              style="width: 70px; height: 40px"
+          /></span>
+          <span>
+            <img
+              src="logosandimages/payment-method-3.png"
+              style="width: 70px; height: 40px"
+          /></span>
+          <span>
+            <img
+              src="logosandimages/payment-method-4.png"
+              style="width: 70px; height: 40px"
+          /></span>
+
+          <!-- </ul> -->
+        </div>
+
+        <div class="col">
+          <h3>
+            Contact info
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <!-- <ul> -->
+          <li><a>Telephone</a>(+ 31) 13 302 01 94</li>
+          <li><a>whatsApp</a>(+ 31) 6 417 932 48</li>
+
+          <p class="footer_email">info@jouwvelgen.nl</p>
+          <!-- <li><a href="">Locations</a></li> -->
+          <!-- <li><a href="">Team</a></li> -->
+
+          <h5><a style="font-size: larger; color: beige">WORKING DAYS</a></h5>
+          <li><a>MON-FRIDAY / 9:00 AM - 5:00 PM </a></li>
+          <li><a>SAT / 12:00 - 17:00 </a></li>
+          <!-- </ul> -->
+        </div>
+        <div class="col">
+          <h3>
+            Social Media
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <!-- <ul> -->
+          <!-- <li><a href="">Philosophy</a></li>
+                <li><a href="">History</a></li>
+                <li><a href="">Locations</a></li>
+                <li><a href="">Team</a></li> -->
+          <div class="social_icons">
+            <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+            <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+          <!-- </ul> -->
+        </div>
+      </div>
+      <hr />
+      <p style="align-items: center" class="copyright">
+        Jouwvelgen Rims and Tyres Ⓒ 2021 - All Rights Reserved
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="code.js"></script>
+  </body>
+</html>
