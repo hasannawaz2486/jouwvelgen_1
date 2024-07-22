@@ -24,13 +24,65 @@
 }
 
 
+.heroCarousol img{
+    max-height: 600px;
+}
+
+.rimWheelContainer{
+    padding: 5px 0;
+}
+
+.rimWheelContainer .carousel-item .w-50{
+    padding: 0 30px;
+}
+#Rnext-button {
+    margin: 82px 0 0 0;
+  }
+  #marked-price-1 {
+    margin: 100px 0 0 0;
+  }
+@media screen and (max-width: 1440px) {
+    .confirger-isreal {
+       
+        margin-top: -300px;
+        height: 450px;
+      }
+    
+}
+
+@media screen and (max-width: 960px) {
+    .confirger-isreal {
+       
+        margin-top: 0;
+        height: auto;
+        position: unset !important;
+        margin: 0 0 24px !important; 
+      }
+      .rimWheelContainer .carousel-item .w-50 {
+        padding: 0 0 0 30px;
+      }
+      #Rnext-button {
+        margin: 82px 0 0 0;
+      }
+      #marked-price-1 {
+        margin: 100px 0 0 0;
+      }
+    
+}
 
 
 
-
-
-
-
+@media screen and (max-width: 500px) {
+    .rimWheelContainer.container{
+        padding: 5px 23px !important;
+    }
+    #Rnext-button {
+        margin: 0 0 0;
+      }
+      #marked-price-1 {
+        margin: 0 0 0;
+      }
+}
 
 
 

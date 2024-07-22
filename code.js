@@ -137,12 +137,12 @@ $(document).ready(function() {
     var currentPrices = prices[currentIndex];
 
     // Update prices in the UI
-    $('#marked-price-1').text(currentPrices.price1);
-    $('#marked-price-2').text(currentPrices.price2);
+    // $('#marked-price-1').text(currentPrices.price1);
+    // $('#marked-price-2').text(currentPrices.price2);
 
-    // update logo
-    $('#logo_').attr('src', currentPrices.logo);
-    $('#logo_2').attr('src', currentPrices.logo2);
+    // // update logo
+    // $('#logo_').attr('src', currentPrices.logo);
+    // $('#logo_2').attr('src', currentPrices.logo2);
 
     // Update images in carouselExampleControls1
     $('#carouselExampleControls1').carousel('next'); // Slide to next image in carouselExampleControls1
